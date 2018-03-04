@@ -1,5 +1,5 @@
 # CncGrblAl
-PCB milling/drilling/cutting utilities for GRBLand  with auto alignment
+PCB milling/drilling/cutting utilities for GRBL and  with auto alignment
 
 
 
