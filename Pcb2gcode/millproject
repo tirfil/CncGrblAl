@@ -1,0 +1,60 @@
+# this is an example config file for pcb2gcode.
+# place this in the same directory as your gerber files to save typing
+
+# You may want to uncomment and change those in local project files
+front=top.glr
+back=bottom.gbl
+drill=drill.drd
+outline=outline.gbr
+#verbose
+
+metric=1
+metricoutput=1
+nog64=1
+nog81=1
+nog91-1=1
+onedrill=1
+
+# parameters for isolation routing / engraving / etching
+zwork=-0.1
+zsafe=2
+zchange=25
+mill-feed=120
+mill-speed=20000
+
+# parameters for cutting out boards
+cutter-diameter=0.059
+zcut=-1.7
+cut-feed=20
+cut-speed=20000
+cut-infeed=1
+cut-front=0
+
+# drilling parameters
+zdrill=-2
+drill-feed=80
+drill-speed=20000
+drill-side=back
+
+#offset=0.006
+# generate voronoi regions
+#voronoi=1
+offset=1000
+dpi=1000
+#max-deviation=0
+
+# auto leveling
+#software=custom
+#al-back=1
+#al-x=38
+#al-y=28
+#al-probefeed=80
+#al-probecode=G38.2
+#al-setzzero=G10 L20 P0 Z0
+#al-probevar=5063
+
+
+
+
+
+
