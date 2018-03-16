@@ -7,6 +7,7 @@ re_x = re.compile("X([0-9\.-]+)")
 re_y = re.compile("Y([0-9\.-]+)")
 re_z = re.compile("Z([0-9\.-]+)")
 re_zz = re.compile("(Z[0-9\.-]+)")
+re_comment = re.compile("(\([^\)]+\))")
 
 class track:
 	def __init__(self):
@@ -69,6 +70,9 @@ if __name__ == "__main__":
 				pt = t.get()
 				zc = zcorr(pt,al)
 				mzz = re_zz.search(line)
+				mcomment = re_comment.search(line)
+				if mcomment:
+					line = line.replace(mcomment.group(1),"")
 				if mzz:
 					#print "\t\t\t" + line.replace(mzz.group(1),"Z%s"%str(pt[2]+zc))
 					ouf.write(line.replace(mzz.group(1),"Z%s"%str(pt[2]+zc)+'\n'))
